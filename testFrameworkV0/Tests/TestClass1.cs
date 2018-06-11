@@ -17,11 +17,6 @@ namespace testFrameworkV0.Tests
             driver = new Browser().Init();
         }
 
-        public void BeforeTest()
-        {
-            
-        }
-
         [Test]
         public void Test1()
         {
