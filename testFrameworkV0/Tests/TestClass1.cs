@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.Events;
-using OpenQA.Selenium.Support.UI;
 
 namespace testFrameworkV0.Tests
 {
