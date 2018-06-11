@@ -32,6 +32,18 @@ namespace testFrameworkV0.Tests
             Assert.IsTrue(driver.Title.Contains(blog));
         }
 
+        [Test]
+        public void Test3()
+        {
+            Assert.IsTrue(true);
+        }
+
+        [Test]
+        public void Test4()
+        {
+            Assert.IsTrue(false);
+        }
+
         [TearDown]
         public void AfterTest()
         {
