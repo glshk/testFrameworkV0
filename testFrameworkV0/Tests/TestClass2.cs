@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using System.Linq;
-using System.Threading;
 using NUnit.Framework;
 using OpenQA.Selenium;
 
@@ -8,42 +7,27 @@ namespace testFrameworkV0.Tests
 {
     [TestFixture]
     [Parallelizable]
-    class TestClass1
+    public class TestClass2
     {
         public IWebDriver driver;
 
         [SetUp]
-        public void BeforeTest1()
+        public void BeforeTest()
         {
             driver = new Browser().Init();
         }
 
         [Test]
-        public void Test1()
+        public void TestFromClass2()
         {
             var test = "Test";
             Assert.IsTrue(driver.Title.Contains(test));
         }
 
         [Test]
-        public void Test2()
-        {
-            var blog = "Blog";
-            Thread.Sleep(1000);
-            Assert.IsTrue(driver.Title.Contains(blog));
-        }
-
-        [Test]
-        public void Test3()
+        public void AnotherTestFromClass2()
         {
             Assert.IsTrue(true);
-        }
-
-        [Test]
-//        [Ignore("always fails")]
-        public void Test4()
-        {
-            Assert.IsTrue(false);
         }
 
         [TearDown]
@@ -51,7 +35,7 @@ namespace testFrameworkV0.Tests
         {
             driver.Close();
 
-//            foreach (var process in new [] {"IEDriverServer", "geckodriver", "chromedriver"})
+//            foreach (var process in new[] { "IEDriverServer", "geckodriver", "chromedriver" })
 //                KillProcesses(process);
         }
 

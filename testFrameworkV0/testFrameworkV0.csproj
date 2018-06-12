@@ -62,6 +62,7 @@
     <Compile Include="Tests\Browser.cs" />
     <Compile Include="Tests\Hooks.cs" />
     <Compile Include="Tests\TestClass1.cs" />
+    <Compile Include="Tests\TestClass2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
