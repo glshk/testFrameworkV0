@@ -1,8 +1,10 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace testFrameworkV0.Tests
 {
@@ -12,7 +14,7 @@ namespace testFrameworkV0.Tests
     {
         public IWebDriver driver;
 
-        [SetUp]
+        //[SetUp]
         public void BeforeTest1()
         {
             driver = new Browser().Init();
@@ -23,6 +25,17 @@ namespace testFrameworkV0.Tests
         {
             var test = "Test";
             Assert.IsTrue(driver.Title.Contains(test));
+        }
+
+        [Test]
+        public void TestFull()
+        {
+            //driver = new ChromeDriver();
+            //driver.Url = @"https://google.com";
+            Console.WriteLine("lol");
+            Thread.Sleep(1000);
+            Assert.IsTrue(true);
+            //driver.Close();
         }
 
         [Test]
@@ -46,7 +59,7 @@ namespace testFrameworkV0.Tests
             Assert.IsTrue(false);
         }
 
-        [TearDown]
+        //[TearDown]
         public void AfterTest()
         {
             driver.Close();
