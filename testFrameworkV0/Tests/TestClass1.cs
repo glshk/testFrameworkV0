@@ -14,10 +14,13 @@ namespace testFrameworkV0.Tests
     {
         public IWebDriver driver;
 
-        //[SetUp]
+        [SetUp]
         public void BeforeTest1()
         {
-            driver = new Browser().Init();
+            //driver = new Browser().Init();
+            driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
+            driver.Url = "http://blog.testproject.io/";
         }
 
         [Test]
@@ -38,7 +41,7 @@ namespace testFrameworkV0.Tests
             //driver.Close();
         }
 
-        [Test]
+        //[Test]
         public void TestFullDriver()
         {
             driver = new ChromeDriver();
@@ -70,7 +73,7 @@ namespace testFrameworkV0.Tests
             Assert.IsTrue(false);
         }
 
-        //[TearDown]
+        [TearDown]
         public void AfterTest()
         {
             driver.Close();
