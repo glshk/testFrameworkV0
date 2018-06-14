@@ -39,6 +39,17 @@ namespace testFrameworkV0.Tests
         }
 
         [Test]
+        public void TestFullDriver()
+        {
+            driver = new ChromeDriver();
+            driver.Url = @"https://google.com";
+            Console.WriteLine("lol driver");
+            Thread.Sleep(1000);
+            Assert.IsTrue(true);
+            driver.Close();
+        }
+
+        [Test]
         public void Test2()
         {
             var blog = "Blog";
